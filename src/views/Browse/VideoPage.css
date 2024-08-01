@@ -1,0 +1,39 @@
+.video-background {
+    background-color: rgba(255, 255, 255, 0);
+    position: fixed;
+    z-index: 9999;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    transition: top 350ms;
+}
+
+.video-background.active {
+    top: 0;
+}
+
+.video-background>* {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.black-background {
+    background-color: rgba(0, 0, 0, 0.986);
+    width: 100vw;
+    height: 100vh;
+}
+
+.video-player {
+    width: 64vw;
+    height: 36vw;
+}
+
+@media (max-width: 767px) {
+    .video-player {
+        width: 100vw;
+        height: 56vw;
+    }
+}

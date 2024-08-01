@@ -1,0 +1,7 @@
+.content-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 10px;
+}

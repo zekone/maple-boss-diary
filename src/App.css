@@ -1,0 +1,45 @@
+#root {
+    padding: 1rem;
+}
+
+.label {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.87);
+    text-decoration: inherit;
+}
+
+.label:hover {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.row-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.column-div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.no-wrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}

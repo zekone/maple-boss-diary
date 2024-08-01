@@ -1,0 +1,19 @@
+.content-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.thumbnail {
+    border-radius: 10px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    max-width: 15rem;
+    width: 100%;
+    height: 56.25%;
+    object-fit: cover;
+}
+
+.thumbnail:hover {
+    border-color: #646cff;
+}

@@ -1,0 +1,12 @@
+.top-nav {
+    justify-content: space-between;
+}
+
+.nav-button-container {
+    display: flex;
+    align-items: center;
+}
+
+.content-container {
+    position: relative;
+}

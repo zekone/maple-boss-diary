@@ -1,0 +1,27 @@
+.sidebar-nav {
+    background: #0F0529;
+    /* background: #15171c; */
+    width: 250px;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: left 350ms;
+    z-index: 10;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.sidebar-nav.active {
+    left: 0;
+}
+
+.sidebar-item {
+    padding: 10px;
+    cursor: default;
+    min-height: 1.5em;
+
+}

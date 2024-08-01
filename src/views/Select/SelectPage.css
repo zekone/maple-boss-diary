@@ -1,0 +1,14 @@
+.select-page {
+    width: 90;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.click-instruction {
+    color: rgb(128, 128, 128);
+}
+
+.description {
+    margin: 0;
+}
