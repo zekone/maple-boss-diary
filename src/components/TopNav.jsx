@@ -1,5 +1,5 @@
-import menuIcon from '../assets/menu.svg';
 import './TopNav.css'
+import { FiMenu } from "react-icons/fi";
 
 const TopNav = ({ view, handleToggleSidebar, handleToggleView }) => {
     view = view === 'Week' ? 'Boss' : 'Week'
@@ -8,14 +8,14 @@ const TopNav = ({ view, handleToggleSidebar, handleToggleView }) => {
         <div className="row-div top-nav">
             <div className="row-div">
                 <div className="nav-button-container">
-                    <a className="menu-button" onClick={handleToggleSidebar}>
-                        <img src={menuIcon}></img>
-                    </a>
+                    <button className="menu-button" onClick={handleToggleSidebar}>
+                        <FiMenu color="#545463" size="40px"/>
+                    </button>
                 </div>
                 <h2 className="no-wrap">Maple Boss Diary</h2>
             </div>
             <div className="nav-button-container">
-                <button onClick={handleToggleView}>
+                <button className="view-button" onClick={handleToggleView}>
                     {view}
                 </button>
             </div>

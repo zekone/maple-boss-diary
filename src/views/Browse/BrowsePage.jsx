@@ -26,7 +26,7 @@ const BrowsePage = ({ selectedView, data, handleSelectBoss, handleSelectWeek }) 
 
     const handleScrollToSection = (sectionName) => {
         if (sectionRef.current[sectionName]) {
-            sectionRef.current[sectionName].scrollIntoView({ behavior: 'smooth' });
+            sectionRef.current[sectionName].scrollIntoView({ behavior: 'smooth', block:"center" });
         }
     }
 
@@ -52,7 +52,7 @@ const BrowsePage = ({ selectedView, data, handleSelectBoss, handleSelectWeek }) 
     }, '0')
 
     return (
-        <div className='column-div'>
+        <div>
             <VideoPage
                 videoId={videoId}
                 handleCloseVideo={handleCloseVideo}
@@ -62,13 +62,13 @@ const BrowsePage = ({ selectedView, data, handleSelectBoss, handleSelectWeek }) 
                 handleToggleSidebar={handleToggleSidebar}
                 handleToggleView={handleToggleView}
             />
+            <Sidebar
+                sidebar={isSidebarVisible}
+                handleScrollToSection={handleScrollToSection}
+                handleCloseSidebar={handleCloseSidebar}
+                sections={selectedView === 'Week' ? weeksSpelt : bosses}
+            />
             <div className='content-container'>
-                <Sidebar
-                    sidebar={isSidebarVisible}
-                    handleScrollToSection={handleScrollToSection}
-                    handleCloseSidebar={handleCloseSidebar}
-                    sections={selectedView === 'Week' ? weeksSpelt : bosses}
-                />
                 {
                     selectedView === 'Week' ? (
                         weeks.map(week =>
