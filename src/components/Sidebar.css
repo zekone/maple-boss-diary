@@ -32,3 +32,10 @@
     background-color:#545463;
     cursor: pointer;
 }
+
+@media (max-width: 500px) {
+    .sidebar-nav {
+        top: 60px;
+        height: calc(100vh - 60px);
+    }
+}

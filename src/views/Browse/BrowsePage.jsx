@@ -2,9 +2,8 @@ import { useState, useRef } from "react";
 import TopNav from "../../components/TopNav";
 import Sidebar from "../../components/Sidebar";
 import Label from "../../components/Label";
-import ContentSection from "../../components/ContentSection";
 import VideoPage from './VideoPage'
-import './BrowsePage.css';
+import ContentDiv from "../../components/ContentDiv";
 
 const groupBy = (data, keyExtractor) => {
     return data.reduce((acc, current) => {
@@ -65,30 +64,16 @@ const BrowsePage = ({ selectedView, data, handleSelectBoss, handleSelectWeek }) 
                 handleCloseSidebar={handleCloseSidebar}
                 sections={selectedView === 'Week' ? weeksSpelt : bosses}
             />
-            <div className='content-container'>
-                {
-                    selectedView === 'Week' ? (
-                        weeks.map(week =>
-                            <ContentSection
-                                key={week}
-                                divref={element => sectionRef.current[`Week ${week}`] = element}
-                                header={`Week ${week}`}
-                                setVideoId={setVideoId}
-                                contents={groupedWeeks[week]}
-                            />)
-                    ) : (
-                        bosses.map(boss =>
-                            <ContentSection
-                                key={boss}
-                                divref={element => sectionRef.current[boss] = element}
-                                header={boss}
-                                setVideoId={setVideoId}
-                                contents={groupedBosses[boss]}
-                            />)
-                    )
-                }
-            </div>
-            <Label text={`Latest update: ${latestDate}`} />
+            <ContentDiv
+                selectedView={selectedView}
+                weeks={weeks}
+                groupedWeeks={groupedWeeks}
+                bosses={bosses}
+                groupedBosses={groupedBosses}
+                setVideoId={setVideoId}
+                sectionRef={sectionRef}
+                latestDate={latestDate}
+            />
         </div>
     )
 }

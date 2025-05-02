@@ -14,9 +14,7 @@ const TopNav = ({ view, handleToggleSidebar, handleSelectWeek, handleSelectBoss 
         <div className="row-div top-nav">
             <div className="row-div">
                 <div className="nav-button-container">
-                    <button className="menu-button" onClick={handleToggleSidebar}>
-                        <FiMenu color="#545463" size="40px"/>
-                    </button>
+                    <FiMenu className="menu-icon" color="#545463" onClick={handleToggleSidebar}/>
                 </div>
                 <h2 className="no-wrap">Maple Boss Diary</h2>
                 <div className='navbar-logo'>
@@ -32,16 +30,16 @@ const TopNav = ({ view, handleToggleSidebar, handleSelectWeek, handleSelectBoss 
                 <div className='dropdown-container'>
                     {open && (
                         <>
-                            <div className='dropdown-item'>
-                                <button onClick={() => {handleSelectWeek();setOpen(false)}} >
-                                    Week
-                                </button>
-                            </div>
-                            <div className='dropdown-item'>
-                                <button onClick={() => {handleSelectBoss();setOpen(false)}} >
-                                    Boss
-                                </button>
-                            </div>
+                        <div className='dropdown-item'>
+                            <button onClick={() => {handleSelectWeek();setOpen(false)}} >
+                                Week
+                            </button>
+                        </div>
+                        <div className='dropdown-item'>
+                            <button onClick={() => {handleSelectBoss();setOpen(false)}} >
+                                Boss
+                            </button>
+                        </div>
                         </>
                     )}
                 </div>

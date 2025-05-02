@@ -1,0 +1,13 @@
+.content-container {
+    position: relative;
+    top:50px;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 500px) {
+    .content-container {
+        top:24px;
+        margin-bottom: 20px;
+    }
+}
+

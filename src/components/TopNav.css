@@ -1,6 +1,9 @@
 .nav-button-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .top-nav {
@@ -13,11 +16,13 @@
     height: 80px;
     z-index: 1000;
     box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
 }
 
-.menu-button{
-    background-color: #ffffff00;
-    border: 0px;
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }
 
 .view-button{
@@ -26,7 +31,6 @@
 }
 
 .dropdown-container {
-    width: 120px;
     height: fit-content;
     padding: 0px;
     background-color: #FFFFFF;
@@ -97,4 +101,34 @@
     width: 44px;
     height: 44px;
     padding-left: 8px;
+}
+
+@media (max-width: 500px) {
+    .top-nav {
+        height: 60px;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    .maple-logo {
+        width: 25px;
+        height: 25px;
+        padding-left: 4px;
+    }
+
+    .menu-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .view-button{
+        margin: 10px;
+        width: 80px;
+        height: 30px;
+        padding: 0px;
+    }
+
+    .dropdown-item button {
+        width: 80px;
+    }
 }
