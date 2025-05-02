@@ -3,8 +3,16 @@
     line-height: 1.5;
     font-weight: 400;
 
-    color: #000000;
-    background-color: #fefefe;
+    --main-bg-color: #161616;
+    --font-color: #FFFFFF;
+    --darkest-color: #000000;
+    --dark-color: #0f0f0f;
+    --button-color: #2b2b2b;
+    --button-hover-color: #424242;
+    --button-border-color: #BFBFBFB3;
+
+    color: var(--font-color);
+    background-color: var(--main-bg-color);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -18,7 +26,6 @@ body {
 
 a {
     font-weight: 500;
-    color: #000000;
     text-decoration: inherit;
 }
 
@@ -34,11 +41,12 @@ button {
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #ffbdeb;
+    background-color: var(--button-color);
+    color: var(--font-color);
     cursor: pointer;
     transition: border-color 0.25s;
 }
 
 button:hover {
-    border-color: #646cff;
+    border-color: var(--button-border-color);
 }

@@ -7,7 +7,7 @@
 
 .thumbnail {
     border-radius: 10px;
-    border: 3px solid transparent;
+    border: 2px solid transparent;
     cursor: pointer;
     transition: border-color 0.25s;
     max-width: 15rem;
@@ -16,5 +16,5 @@
 }
 
 .thumbnail:hover {
-    border-color: #646cff;
+    border-color: var(--button-border-color);
 }

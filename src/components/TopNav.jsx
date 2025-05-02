@@ -14,7 +14,7 @@ const TopNav = ({ view, handleToggleSidebar, handleSelectWeek, handleSelectBoss 
         <div className="row-div top-nav">
             <div className="row-div">
                 <div className="nav-button-container">
-                    <FiMenu className="menu-icon" color="#545463" onClick={handleToggleSidebar}/>
+                    <FiMenu className="menu-icon" onClick={handleToggleSidebar}/>
                 </div>
                 <h2 className="no-wrap">Maple Boss Diary</h2>
                 <div className='navbar-logo'>
