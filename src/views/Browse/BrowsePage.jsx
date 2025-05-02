@@ -34,10 +34,6 @@ const BrowsePage = ({ selectedView, data, handleSelectBoss, handleSelectWeek }) 
 
     const handleCloseSidebar = () => setIsSidebarVisible(false);
 
-    const handleToggleView = () => {
-        selectedView === 'Week' ? handleSelectBoss() : handleSelectWeek()
-    }
-
     const groupedBosses = groupBy(data, item => item.boss);
     const groupedWeeks = groupBy(data, item => item.week);
     const bosses = Object.keys(groupedBosses);
@@ -60,7 +56,8 @@ const BrowsePage = ({ selectedView, data, handleSelectBoss, handleSelectWeek }) 
             <TopNav
                 view={selectedView}
                 handleToggleSidebar={handleToggleSidebar}
-                handleToggleView={handleToggleView}
+                handleSelectBoss={handleSelectBoss}
+                handleSelectWeek={handleSelectWeek}
             />
             <Sidebar
                 sidebar={isSidebarVisible}

@@ -8,7 +8,7 @@ const jsonUrl = 'https://raw.githubusercontent.com/zekone/maple-boss-json/main/b
 
 const App = () => {
     const [data, setData] = useState([])
-    const [selectedView, setSelectedView] = useState('')
+    const [selectedView, setSelectedView] = useState('Boss')
 
     const handleSelectBoss = () => setSelectedView('Boss')
     const handleSelectWeek = () => setSelectedView('Week')
