@@ -47,34 +47,38 @@ const BrowsePage = ({ selectedView, data, handleSelectBoss, handleSelectWeek }) 
     }, '0')
 
     return (
-        <div>
-            <VideoPage
-                videoId={videoId}
-                handleCloseVideo={handleCloseVideo}
-            />
+        <>
             <TopNav
                 view={selectedView}
                 handleToggleSidebar={handleToggleSidebar}
                 handleSelectBoss={handleSelectBoss}
                 handleSelectWeek={handleSelectWeek}
             />
-            <Sidebar
-                sidebar={isSidebarVisible}
-                handleScrollToSection={handleScrollToSection}
-                handleCloseSidebar={handleCloseSidebar}
-                sections={selectedView === 'Week' ? weeksSpelt : bosses}
+
+            <VideoPage
+                videoId={videoId}
+                handleCloseVideo={handleCloseVideo}
             />
-            <ContentDiv
-                selectedView={selectedView}
-                weeks={weeks}
-                groupedWeeks={groupedWeeks}
-                bosses={bosses}
-                groupedBosses={groupedBosses}
-                setVideoId={setVideoId}
-                sectionRef={sectionRef}
-                latestDate={latestDate}
-            />
-        </div>
+
+            <div>
+                <Sidebar
+                    sidebar={isSidebarVisible}
+                    handleScrollToSection={handleScrollToSection}
+                    handleCloseSidebar={handleCloseSidebar}
+                    sections={selectedView === 'Week' ? weeksSpelt : bosses}
+                />
+                <ContentDiv
+                    selectedView={selectedView}
+                    weeks={weeks}
+                    groupedWeeks={groupedWeeks}
+                    bosses={bosses}
+                    groupedBosses={groupedBosses}
+                    setVideoId={setVideoId}
+                    sectionRef={sectionRef}
+                    latestDate={latestDate}
+                />
+            </div>
+        </>
     )
 }
 
