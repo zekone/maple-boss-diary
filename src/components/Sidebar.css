@@ -1,9 +1,9 @@
 .sidebar-nav {
     width: 200px;
-    height: calc(100vh - 80px);
+    height: calc(100vh - var(--top-nav-height));
     display: flex;
     position: fixed;
-    top: 80px;
+    top: var(--top-nav-height);
     left: -100%;
     transition: left 350ms;
     z-index: 999;
@@ -33,9 +33,3 @@
     cursor: pointer;
 }
 
-@media (max-width: 500px) {
-    .sidebar-nav {
-        top: 60px;
-        height: calc(100vh - 60px);
-    }
-}
