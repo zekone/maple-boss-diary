@@ -1,5 +1,4 @@
 import ContentSection from "./ContentSection";
-import Label from "./Label";
 import './ContentDiv.css';
 
 const ContentDiv = ({ selectedView, weeks, groupedWeeks, bosses, groupedBosses, setVideoId, sectionRef , latestDate }) => {
@@ -27,7 +26,7 @@ const ContentDiv = ({ selectedView, weeks, groupedWeeks, bosses, groupedBosses, 
                         />)
                 )
             }
-            <Label text={`Latest update: ${latestDate}`} />
+            <span>{`Latest update: ${latestDate}`}</span>
         </div>
     )
 }

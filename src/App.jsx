@@ -1,17 +1,13 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
 import './App.css'
-import BrowsePage from './views/Browse/BrowsePage'
-import SelectPage from './views/Select/SelectPage'
+import { useState, useEffect } from 'react'
+import { Route, Routes, useNavigate } from 'react-router-dom'
+import BrowsePage from './page/BrowsePage'
+import axios from 'axios'
 
 const jsonUrl = 'https://raw.githubusercontent.com/zekone/maple-boss-json/main/boss.json';
 
 const App = () => {
     const [data, setData] = useState([])
-    const [selectedView, setSelectedView] = useState('Boss')
-
-    const handleSelectBoss = () => setSelectedView('Boss')
-    const handleSelectWeek = () => setSelectedView('Week')
 
     useEffect(() => {
         axios
@@ -24,29 +20,16 @@ const App = () => {
             })
     }, [])
 
-    if (selectedView === '') {
-        return (
-            <>
-                <SelectPage
-                    handleSelectBoss={handleSelectBoss}
-                    handleSelectWeek={handleSelectWeek}
-                />
-            </>
-        )
-    } else {
-        return (
-            <>
-                <BrowsePage
-                    browseView={selectedView}
-                    data={data}
-                    selectedView={selectedView}
-                    handleSelectBoss={handleSelectBoss}
-                    handleSelectWeek={handleSelectWeek}
-                />
-            </>
-        )
-    }
-
+    return (
+        <>
+            <Routes>
+                <Route path="/" element = {<BrowsePage data={data}/>}/>
+                {/* <Route path="/add" element={<AddPage setHasChanges={setHasChanges}/>} />
+                <Route path="/edit" element={<EditPage data={data} setHasChanges={setHasChanges}/>} />
+                <Route path="/search" element={<SearchPage data={data} setVideoId={setVideoId}/>} /> */}
+            </Routes>
+        </>
+    )
 
 }
 export default App

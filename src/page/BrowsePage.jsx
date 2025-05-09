@@ -1,9 +1,8 @@
 import { useState, useRef } from "react";
-import TopNav from "../../components/TopNav";
-import Sidebar from "../../components/Sidebar";
-import Label from "../../components/Label";
+import NavBar from "../components/NavBar";
+import Sidebar from "../components/Sidebar";
 import VideoPage from './VideoPage'
-import ContentDiv from "../../components/ContentDiv";
+import ContentDiv from "../components/ContentDiv";
 
 const groupBy = (data, keyExtractor) => {
     return data.reduce((acc, current) => {
@@ -16,7 +15,7 @@ const groupBy = (data, keyExtractor) => {
     }, {});
 };
 
-const BrowsePage = ({ selectedView, data, handleSelectBoss, handleSelectWeek }) => {
+const BrowsePage = ({ data, selectedView }) => {
     const [isSidebarVisible, setIsSidebarVisible] = useState(false);
     const sectionRef = useRef({});
     const [videoId, setVideoId] = useState('')
@@ -48,11 +47,8 @@ const BrowsePage = ({ selectedView, data, handleSelectBoss, handleSelectWeek }) 
 
     return (
         <>
-            <TopNav
-                view={selectedView}
+            <NavBar
                 handleToggleSidebar={handleToggleSidebar}
-                handleSelectBoss={handleSelectBoss}
-                handleSelectWeek={handleSelectWeek}
             />
 
             <VideoPage

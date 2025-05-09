@@ -1,0 +1,24 @@
+.nav-button-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+}
+
+.nav-button {
+    height: 40px;
+    width: 80px;
+    border-radius: 0;
+    border-width: 5px 0px 0px 0px;
+    background-color: transparent;
+}
+
+@media (max-width: 767px) {
+    .nav-button-container {
+        margin-left: 0px;
+    }
+
+    .nav-button {
+        height: 34px;
+        width: 44px;
+    }
+}
