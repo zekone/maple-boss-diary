@@ -1,18 +1,17 @@
 import './ContentCard.css'
 
-const Thumbnail = ({ videoId, onClick }) => {
-    const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-    return (
-        <img className='thumbnail' src={thumbnailUrl} onClick={onClick} />
-    )
-}
 
-const ContentCard = ({ videoId, date, boss, onClickThumbnail }) => {
+const ContentCard = ({ id, boss, date, week, setVideoId }) => {
     return (
         <div className="content-card">
-            <Thumbnail videoId={videoId} onClick={onClickThumbnail} />
-            <span>{boss}</span>
-            <span>{date}</span>
+            <img 
+                className='thumbnail' 
+                src={`https://img.youtube.com/vi/${id}/hqdefault.jpg`} 
+                onClick={()=>setVideoId(id)} 
+                alt={id}
+            />
+            <span> {boss} </span>
+            <span> {`${date} (W${week})`} </span>
         </div>
     )
 }

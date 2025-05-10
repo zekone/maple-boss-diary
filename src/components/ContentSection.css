@@ -1,6 +1,9 @@
 .content-section{
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.conten-section-header{
+    margin-top: 0px;
 }
 
 .content-list {

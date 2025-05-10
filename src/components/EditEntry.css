@@ -1,0 +1,84 @@
+.edit-entry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 650px;
+    height: 50px;
+    border-radius: 6px;
+    background-color: var(--dark-color);
+}
+
+.edit-entry-input {
+    height: 30px;
+    border-radius: 4px;
+}
+
+.edit-entry-input:disabled {
+    background-color: transparent;
+}
+
+.id-input {
+    width: 160px;
+}
+
+.name-input {
+    width: 220px;
+}
+
+.date-input {
+    width: 46px;
+}
+
+.edit-entry-button {
+    cursor: pointer;
+}
+
+.edit-entry-button-disabled {
+    cursor: default;
+    color: transparent;
+}
+
+@media (max-width: 767px) {
+    .edit-entry {
+        gap: 6px;
+    }
+
+    .id-input {
+        width: 120px;
+    }
+    
+    .name-input {
+        width: 160px;
+    }
+    
+    .date-input {
+        width: 44px;
+    }
+
+    .edit-entry {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .edit-entry {
+        gap: 6px;
+    }
+
+    .id-input {
+        width: 80px;
+    }
+    
+    .name-input {
+        width: 100px;
+    }
+    
+    .date-input {
+        width: 44px;
+    }
+
+    .edit-entry {
+        width: 100%;
+    }
+}

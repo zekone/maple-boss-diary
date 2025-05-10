@@ -1,7 +1,7 @@
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: 600;
 
     --main-bg-color: #161616;
     --font-color: #FFFFFF;
@@ -44,20 +44,24 @@ h1 {
 }
 
 button {
-    border-radius: 5px;
-    border: 2px solid transparent;
-    padding: 0.4em 0.8em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
     background-color: var(--button-color);
     color: var(--font-color);
+    border-radius: 5px;
+    border: 1.5px solid transparent;
+    font-size: 1em;
+    font-family: inherit;
     cursor: pointer;
     transition: border-color 0.25s;
+    font-weight: 600;
 }
 
 button:hover {
     border-color: var(--button-border-color);
+}
+
+button:disabled {
+    border: none;
+    cursor: default;
 }
 
 .label {

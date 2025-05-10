@@ -1,0 +1,35 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 15, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.modal {
+    width: 40%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--button-hover-color);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.modal-button {
+    margin: 10px;
+    height: 30px;
+    width: 100px;
+}
+
+@media (max-width: 767px) {
+    .modal {
+        width: 80%;
+    }
+}
