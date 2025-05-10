@@ -21,7 +21,7 @@
 @media (max-width: 767px) {
     .search-input{
         height: 28px;
-        width: 120px;
+        width: 80px;
     }
 
     .search-bar-container{
