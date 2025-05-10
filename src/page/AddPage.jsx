@@ -27,17 +27,16 @@ const AddPage = () => {
     
         try {
             setUploading(true);
-            await axios.post(api.ADD, formData, {
-                headers: { 'Content-Type': 'multipart/form-data' },
-                onUploadProgress: (progressEvent) => {
-                    const total = progressEvent.total;
-                    const current = progressEvent.loaded;
-                    const percentage = Math.floor((current / total) * 100);
-                    setMessage(`Upload progess: ${percentage}%`);
-                }
-            });
-            setMessage(`Upload successful!`);
-            setHasChanges(true);
+            // await axios.post(api.ADD, formData, {
+            //     headers: { 'Content-Type': 'multipart/form-data' },
+            //     onUploadProgress: (progressEvent) => {
+            //         const total = progressEvent.total;
+            //         const current = progressEvent.loaded;
+            //         const percentage = Math.floor((current / total) * 100);
+            //         setMessage(`Upload progess: ${percentage}%`);
+            //     }
+            // });
+            setMessage(`Not implemented.`);
             setVideoFile(null);
             setThumbnailFile(null);
             setId('');

@@ -54,6 +54,11 @@
     .add-form {
         top: 0;
         height: 100%;
+        width: 100%;
         padding: 0px;
+    }
+
+    .form-text-input {
+        width: 200px;
     }
 }
