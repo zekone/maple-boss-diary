@@ -66,9 +66,11 @@ const App = () => {
     const handleCloseVideo = () => setVideoId('')
 
     const handleScrollToSection = (sectionName) => {
-        if (sectionRef.current[sectionName]) {
-            sectionRef.current[sectionName].scrollIntoView({ behavior: 'smooth', block:"center" });
-        }
+        handleGoHomeAnd(() => {
+            if (sectionRef.current[sectionName]) {
+                sectionRef.current[sectionName].scrollIntoView({ behavior: 'smooth', block:"center" });
+            }
+        });
     }
 
     return (
