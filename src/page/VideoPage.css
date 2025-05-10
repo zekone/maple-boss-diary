@@ -28,6 +28,11 @@
     height: 36vw;
 }
 
+.close-video-button {
+    margin-top: 10px;
+    height: 40px;
+    width: 80px;
+}
 
 @media (max-width: 767px) {
     .video-player {

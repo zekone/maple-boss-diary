@@ -25,7 +25,7 @@ const VideoPage = ({ videoId, handleCloseVideo }) => {
                                 title="Embedded YouTube"
                             />
                         </div>
-                        <button onClick={handleCloseVideo} style={{ marginTop: '10px' }}>Close</button>
+                        <button className='close-video-button' onClick={handleCloseVideo}>Close</button>
                     </div>
                 </div>
             )}
